@@ -44,25 +44,3 @@ jobs:
       uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda9_2
       with:
         path: rust-cuda-test
-
-  ubuntu1804-cuda9_1:
-    runs-on: ubuntu-latest
-    name: Ubuntu18.04, CUDA 9.1
-    steps:
-    - uses: actions/checkout@v1
-    - name: cargo test
-      id: test
-      uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda9_1
-      with:
-        path: rust-cuda-test
-
-  ubuntu1804-cuda9_0:
-    runs-on: ubuntu-latest
-    name: Ubuntu18.04, CUDA 9.0
-    steps:
-    - uses: actions/checkout@v1
-    - name: cargo test
-      id: test
-      uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda9_0
-      with:
-        path: rust-cuda-test
