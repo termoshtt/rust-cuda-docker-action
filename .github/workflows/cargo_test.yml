@@ -22,3 +22,14 @@ jobs:
       uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda10_1
       with:
         path: rust-cuda-test
+
+  ubuntu1804-cuda10_0:
+    runs-on: ubuntu-latest
+    name: Ubuntu18.04, CUDA 10.0
+    steps:
+    - uses: actions/checkout@v1
+    - name: cargo test
+      id: test
+      uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda10_0
+      with:
+        path: rust-cuda-test
