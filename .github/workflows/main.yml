@@ -1,15 +1,17 @@
 on: [push]
 
 jobs:
-  cargo_test:
+  ubuntu1804-cuda10_2:
     runs-on: ubuntu-latest
-    name: cargo test
+    name: cargo test on ubuntu18.04 with CUDA 10.2
     steps:
     - uses: actions/checkout@v1
-    - name: cargo test on ubuntu18.04 with CUDA 10.2
-      id: ubuntu1804-cuda10_2
-      uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda10_2
+    - name: cargo test
+      id: test
+      uses: termoshtt/rust-cuda-docker-action@9c43b89
       with:
         path: rust-cuda-test
-    - name: get rustc version
-      run: echo "rustc-version = ${{ steps.ubuntu1804-cuda10_2.outputs.rustc-version }}"
+    - name: show versions
+      run: |
+        echo "rustc-version = ${{ steps.test.outputs.rustc-version }}"
+        echo "nvcc-version  = ${{ steps.test.outputs.nvcc-version }}"
