@@ -1,13 +1,12 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  cargo_test:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: cargo test
     steps:
-    - name: Hello world action step
-      id: hello
-      uses: termoshtt/rust-cuda-docker-action@master
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+    - name: cargo test on ubuntu18.04 with CUDA 10.2
+      id: ubuntu1804-cuda10_2
+      uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda10_2
+    - name: get rustc version
+      run: echo "rustc-version = ${{ steps.ubuntu1804-cuda10_2.outputs.rustc-version }}"
