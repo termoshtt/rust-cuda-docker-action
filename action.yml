@@ -1,16 +1,16 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'rust-cuda'
+description: 'cargo test with CUDA libraries'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  cuda-version:
+    description: 'Version of CUDA libraries'
     required: true
-    default: 'World'
+    default: '10.2'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: ${{ cuda-version }}.Dockerfile
   args:
     - ${{ inputs.who-to-greet }}
