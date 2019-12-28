@@ -16,6 +16,8 @@
 
 ## 使用例
 
+```toml
 uses: termoshtt/rust-cuda-docker-action@master
 with:
   who-to-greet: 'Mona the Octocat'
+```
