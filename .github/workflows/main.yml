@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: cargo test
     steps:
+    - uses: actions/checkout@v1
     - name: cargo test on ubuntu18.04 with CUDA 10.2
       id: ubuntu1804-cuda10_2
       uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda10_2
