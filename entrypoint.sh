@@ -1,5 +1,7 @@
 #!/bin/bash
-set -exu
+set -eu
+
+source $HOME/.cargo/env
 
 echo ::set-output name=nvcc-version::$(nvcc --version)
 echo ::set-output name=rustc-version::$(rustc --version)
