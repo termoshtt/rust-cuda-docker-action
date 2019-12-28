@@ -1,4 +1,4 @@
-[submodule "ubuntu18.04-cuda10.2"]
+[submodule "ubuntu1804-cuda10_2"]
+	path = ubuntu1804-cuda10_2
 	url = git@github.com:termoshtt/rust-cuda-docker-action.git
-	path = ubuntu18.04-cuda10.2
-	branch = ubuntu18.04-cuda10.2
+	branch = ubuntu1804-cuda10_2
