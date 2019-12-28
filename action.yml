@@ -8,6 +8,8 @@ inputs:
 outputs:
   rustc-version:
     description: 'Version of rustc'
+  nvcc-version:
+    description: 'Version of nvcc'
 runs:
   using: 'docker'
   image: 'Dockerfile'
