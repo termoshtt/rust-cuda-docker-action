@@ -3,7 +3,7 @@ on: [push]
 jobs:
   ubuntu1804-cuda10_2:
     runs-on: ubuntu-latest
-    name: Ubuntu18.04 with CUDA 10.2
+    name: Ubuntu18.04, CUDA 10.2
     steps:
     - uses: actions/checkout@v1
     - name: cargo test
@@ -11,14 +11,10 @@ jobs:
       uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda10_2
       with:
         path: rust-cuda-test
-    - name: show versions
-      run: |
-        echo "rustc-version = ${{ steps.test.outputs.rustc-version }}"
-        echo "nvcc-version  = ${{ steps.test.outputs.nvcc-version }}"
 
   ubuntu1804-cuda10_1:
     runs-on: ubuntu-latest
-    name: Ubuntu18.04 with CUDA 10.1
+    name: Ubuntu18.04, CUDA 10.1
     steps:
     - uses: actions/checkout@v1
     - name: cargo test
@@ -26,7 +22,3 @@ jobs:
       uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda10_1
       with:
         path: rust-cuda-test
-    - name: show versions
-      run: |
-        echo "rustc-version = ${{ steps.test.outputs.rustc-version }}"
-        echo "nvcc-version  = ${{ steps.test.outputs.nvcc-version }}"
