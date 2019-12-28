@@ -8,7 +8,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: cargo test
       id: test
-      uses: termoshtt/rust-cuda-docker-action@56ad45d
+      uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda10_2
       with:
         path: rust-cuda-test
     - name: show versions
