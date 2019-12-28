@@ -1,9 +1,15 @@
 name: 'rust-cuda'
 description: 'cargo test with CUDA libraries'
-inputs: {}
+inputs:
+  path:
+    description: 'Path to crate'
+    required: false
+    default: ''
 outputs:
-  rustc-version: # id of output
+  rustc-version:
     description: 'Version of rustc'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
