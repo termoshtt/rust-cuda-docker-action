@@ -11,6 +11,6 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: ${{ cuda-version }}.Dockerfile
+  image: ${{ inputs.cuda-version }}.Dockerfile
   args:
     - ${{ inputs.who-to-greet }}
