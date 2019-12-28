@@ -1,12 +1,9 @@
-# action.yml
 name: 'rust-cuda'
 description: 'cargo test with CUDA libraries'
 inputs: {}
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  rustc-version: # id of output
+    description: 'Version of rustc'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
