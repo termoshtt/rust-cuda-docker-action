@@ -5,13 +5,13 @@ Supported platforms
 
 |CUDA | Ubuntu 18.04 | Ubuntu 16.04 | RedHat UBI8 | RedHat UBI7 | CentOS 7 | CentOS 6 |
 |:---:|:------------:|:------------:|:-----------:|:-----------:|:--------:|:--------:|
-|10.2 | ✔️            |              |             |             |          |          |
-|10.1 | ✔️            |              |             |             |          |          |
-|10.0 | ✔️            |              | -           | -           |          |          |
-|9.2  | ✔️            |              | -           | -           |          |          |
-|9.1  | -            |              | -           | -           |          |          |
-|9.0  | -            |              | -           | -           |          |          |
-|8.0  | -            |              | -           | -           |          |          |
+|10.2 | ✔️            |  ✔️           |             |             |          |          |
+|10.1 | ✔️            |  ✔️           |             |             |          |          |
+|10.0 | ✔️            |  ✔️           | -           | -           |          |          |
+|9.2  | ✔️            |  ✔️           | -           | -           |          |          |
+|9.1  | -            |  ✔️           | -           | -           |          |          |
+|9.0  | -            |  ✔️           | -           | -           |          |          |
+|8.0  | -            |  ✔️           | -           | -           |          |          |
 
 - https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/supported-tags.md
 - https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/unsupported-tags.md
