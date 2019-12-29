@@ -1,23 +1,52 @@
 # rust-cuda docker action
 
-このアクションは"Hello World"もしくは"Hello" + ログに挨拶する人物名を出力します。
+Supported platforms
+--------------------
 
-## Inputs
+|CUDA | Ubuntu 18.04 | Ubuntu 16.04 | RedHat UBI8 | RedHat UBI7 | CentOS 7 | CentOS 6 |
+|:---:|:------------:|:------------:|:-----------:|:-----------:|:--------:|:--------:|
+|10.2 | ✔️            |  ✔️           |             |             |          |          |
+|10.1 | ✔️            |  ✔️           |             |             |          |          |
+|10.0 | ✔️            |  ✔️           | -           | -           |          |          |
+|9.2  | ✔️            |  ✔️           | -           | -           |          |          |
+|9.1  | -            |  ✔️           | -           | -           |          |          |
+|9.0  | -            |  ✔️           | -           | -           |          |          |
+|8.0  | -            |  ✔️           | -           | -           |          |          |
 
-### `who-to-greet`
+- https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/supported-tags.md
+- https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/unsupported-tags.md
 
-**必須** 挨拶する相手の名前。 デフォルトは `"World"`。
+Usage
+------
 
-## 出力
-
-### `time`
-
-挨拶した時間。
-
-## 使用例
-
-```toml
-uses: termoshtt/rust-cuda-docker-action@master
-with:
-  who-to-greet: 'Mona the Octocat'
 ```
+on: [push]
+
+jobs:
+  ubuntu1804-cuda10_2:
+    runs-on: ubuntu-latest
+    name: cargo test on ubuntu18.04 with CUDA 10.2
+    steps:
+    - uses: actions/checkout@v1
+    - name: cargo test
+      id: test
+      uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda10_2
+      with:
+        path: rust-cuda-test
+    - name: show versions
+      run: |
+        echo "rustc-version = ${{ steps.test.outputs.rustc-version }}"
+        echo "nvcc-version  = ${{ steps.test.outputs.nvcc-version }}"
+```
+
+### Inputs
+
+- `with.path`
+  - Path to crate directory
+  - optional, default = `$PWD`
+
+### Outputs
+- `rustc-version`
+  - Output of `rustc --version`
+- `nvcc-version`
+  - Output of `nvcc --version`
