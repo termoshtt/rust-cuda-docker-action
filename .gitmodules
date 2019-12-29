@@ -42,3 +42,59 @@
 	path = ubuntu1604-cuda8_0
 	url = git@github.com:termoshtt/rust-cuda-docker-action.git
 	branch = ubuntu1604-cuda8_0
+[submodule "centos6-cuda8_0"]
+	path = centos6-cuda8_0
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos6-cuda8_0
+[submodule "centos6-cuda9_0"]
+	path = centos6-cuda9_0
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos6-cuda9_0
+[submodule "centos6-cuda9_1"]
+	path = centos6-cuda9_1
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos6-cuda9_1
+[submodule "centos6-cuda9_2"]
+	path = centos6-cuda9_2
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos6-cuda9_2
+[submodule "centos6-cuda10_0"]
+	path = centos6-cuda10_0
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos6-cuda10_0
+[submodule "centos6-cuda10_1"]
+	path = centos6-cuda10_1
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos6-cuda10_1
+[submodule "centos6-cuda10_2"]
+	path = centos6-cuda10_2
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos6-cuda10_2
+[submodule "centos7-cuda8_0"]
+	path = centos7-cuda8_0
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos7-cuda8_0
+[submodule "centos7-cuda9_0"]
+	path = centos7-cuda9_0
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos7-cuda9_0
+[submodule "centos7-cuda9_1"]
+	path = centos7-cuda9_1
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos7-cuda9_1
+[submodule "centos7-cuda9_2"]
+	path = centos7-cuda9_2
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos7-cuda9_2
+[submodule "centos7-cuda10_0"]
+	path = centos7-cuda10_0
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos7-cuda10_0
+[submodule "centos7-cuda10_1"]
+	path = centos7-cuda10_1
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos7-cuda10_1
+[submodule "centos7-cuda10_2"]
+	path = centos7-cuda10_2
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = centos7-cuda10_2
