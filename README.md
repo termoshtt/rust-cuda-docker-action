@@ -8,21 +8,23 @@ Runs `cargo test` on CUDA installed systems **WITHOUT** GPU. This action is suit
 Supported platforms
 --------------------
 
-|CUDA | Ubuntu 18.04 | Ubuntu 16.04 | RedHat UBI8 | RedHat UBI7 | CentOS 7 | CentOS 6 |
-|:---:|:------------:|:------------:|:-----------:|:-----------:|:--------:|:--------:|
-|10.2 | ✔️            |  ✔️           |             |             |  ✔️       |  ✔️       |
-|10.1 | ✔️            |  ✔️           |             |             |  ✔️       |  ✔️       |
-|10.0 | ✔️            |  ✔️           | -           | -           |  ✔️       |  ✔️       |
-|9.2  | ✔️            |  ✔️           | -           | -           |  ✔️       |  ✔️       |
-|9.1  | -            |  ✔️           | -           | -           |  ✔️       |  ✔️       |
-|9.0  | -            |  ✔️           | -           | -           |  ✔️       |  ✔️       |
-|8.0  | -            |  ✔️           | -           | -           |  ✔️       |  ✔️       |
+|CUDA | Ubuntu 18.04             | Ubuntu 16.04             | RedHat UBI8 | RedHat UBI7 | CentOS 7              | CentOS 6              |
+|:---:|:------------------------:|:------------------------:|:-----------:|:-----------:|:---------------------:|:---------------------:|
+|10.2 |[✔️](./ubuntu1804-cuda10_2)|[✔️](./ubuntu1604-cuda10_2)|             |             |[✔️](./centos7-cuda10_2)|[✔️](./centos6-cuda10_2)|
+|10.1 |[✔️](./ubuntu1804-cuda10_1)|[✔️](./ubuntu1604-cuda10_1)|             |             |[✔️](./centos7-cuda10_1)|[✔️](./centos6-cuda10_1)|
+|10.0 |[✔️](./ubuntu1804-cuda10_0)|[✔️](./ubuntu1604-cuda10_0)| -           | -           |[✔️](./centos7-cuda10_0)|[✔️](./centos6-cuda10_0)|
+|9.2  |[✔️](./ubuntu1804-cuda9_2) |[✔️](./ubuntu1604-cuda9_2) | -           | -           |[✔️](./centos7-cuda9_2) |[✔️](./centos6-cuda9_2) |
+|9.1  | -                        |[✔️](./ubuntu1604-cuda9_1) | -           | -           |[✔️](./centos7-cuda9_1) |[✔️](./centos6-cuda9_1) |
+|9.0  | -                        |[✔️](./ubuntu1604-cuda9_0) | -           | -           |[✔️](./centos7-cuda9_0) |[✔️](./centos6-cuda9_0) |
+|8.0  | -                        |[✔️](./ubuntu1604-cuda8_0) | -           | -           |[✔️](./centos7-cuda8_2) |[✔️](./centos6-cuda8_0) |
 
 - https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/supported-tags.md
 - https://gitlab.com/nvidia/container-images/cuda/blob/master/doc/unsupported-tags.md
 
 Usage
 ------
+
+For exmaple the following YAML add a test on Ubuntu 18.04 with CUDA 10.2
 
 ```
 on: [push]
@@ -35,7 +37,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: cargo test
       id: test
-      uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda10_2
+      uses: termoshtt/rust-cuda-docker-action@v1.0/ubuntu1804-cuda10_2
       with:
         path: rust-cuda-test
     - name: show versions
