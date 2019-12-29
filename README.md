@@ -1,5 +1,10 @@
 # rust-cuda docker action
 
+Runs `cargo test` on CUDA installed systems **WITHOUT** GPU. This action is suitable for
+ 
+- PTX validation (using `nvcc`)
+- CUDA API testing on host-side
+
 Supported platforms
 --------------------
 
