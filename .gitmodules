@@ -14,3 +14,31 @@
 	path = ubuntu1804-cuda9_2
 	url = git@github.com:termoshtt/rust-cuda-docker-action.git
 	branch = ubuntu1804-cuda9_2
+[submodule "ubuntu1604-cuda10_2"]
+	path = ubuntu1604-cuda10_2
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = ubuntu1604-cuda10_2
+[submodule "ubuntu1604-cuda10_1"]
+	path = ubuntu1604-cuda10_1
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = ubuntu1604-cuda10_1
+[submodule "ubuntu1604-cuda10_0"]
+	path = ubuntu1604-cuda10_0
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = ubuntu1604-cuda10_0
+[submodule "ubuntu1604-cuda9_2"]
+	path = ubuntu1604-cuda9_2
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = ubuntu1604-cuda9_2
+[submodule "ubuntu1604-cuda9_1"]
+	path = ubuntu1604-cuda9_1
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = ubuntu1604-cuda9_1
+[submodule "ubuntu1604-cuda9_0"]
+	path = ubuntu1604-cuda9_0
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = ubuntu1604-cuda9_0
+[submodule "ubuntu1604-cuda8_0"]
+	path = ubuntu1604-cuda8_0
+	url = git@github.com:termoshtt/rust-cuda-docker-action.git
+	branch = ubuntu1604-cuda8_0
