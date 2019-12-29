@@ -7,14 +7,14 @@ Usage
 on: [push]
 
 jobs:
-  ubuntu1804-cuda10_2:
+  TAG:
     runs-on: ubuntu-latest
-    name: cargo test on ubuntu18.04 with CUDA 10.2
+    name: cargo test on OS OS_VERSION with CUDA CUDA_VERSION
     steps:
     - uses: actions/checkout@v1
     - name: cargo test
       id: test
-      uses: termoshtt/rust-cuda-docker-action@ubuntu1804-cuda10_2
+      uses: termoshtt/rust-cuda-docker-action@TAG
       with:
         path: rust-cuda-test
     - name: show versions

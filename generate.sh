@@ -11,9 +11,14 @@ ubuntu_generate () {
   sed -e "s/CUDA_VERSION/${CUDA_VERSION}/" \
       -e "s/UBUNTU_VERSION/${UBUNTU_VERSION}/" \
       < ubuntu.Dockerfile > Dockerfile
+  sed -e "s/CUDA_VERSION/${CUDA_VERSION}/" \
+      -e "s/OS_VERSION/${UBUNTU_VERSION}/" \
+      -e "s/OS/Ubuntu/" \
+      -e "s/TAG/$tag/" \
+      < TEMPLATE.md > README.md
   git branch -D $tag || true
   git checkout -b $tag
-  git add Dockerfile
+  git add Dockerfile README.md
   git commit -m "Ubuntu ${UBUNTU_VERSION} with CUDA ${CUDA_VERSION}"
   git checkout -
 }
@@ -28,9 +33,14 @@ centos_generate () {
   sed -e "s/CUDA_VERSION/${CUDA_VERSION}/" \
       -e "s/CENTOS_VERSION/${CENTOS_VERSION}/" \
       < centos.Dockerfile > Dockerfile
+  sed -e "s/CUDA_VERSION/${CUDA_VERSION}/" \
+      -e "s/OS_VERSION/${CENTOS_VERSION}/" \
+      -e "s/OS/CentOS/" \
+      -e "s/TAG/$tag/" \
+      < TEMPLATE.md > README.md
   git branch -D $tag || true
   git checkout -b $tag
-  git add Dockerfile
+  git add Dockerfile README.md
   git commit -m "CentOS ${CENTOS_VERSION} with CUDA ${CUDA_VERSION}"
   git checkout -
 }
