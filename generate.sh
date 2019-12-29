@@ -32,4 +32,6 @@ for CUDA_VERSION in 9.2 10.0 10.1 10.2; do
   tags=($(ubuntu_tag) "${tags[@]}")
 done
 
-git push origin "${tags[@]}" -f
+if [[ -n "${PUBLISH:-}" ]]; then
+  git push origin "${tags[@]}" -f
+fi
