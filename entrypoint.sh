@@ -1,7 +1,6 @@
 #!/bin/bash
 set -eu
 
-source /root/.cargo/env
 rustup default stable
 
 echo ::set-output name=nvcc-version::$(nvcc --version)
